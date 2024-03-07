@@ -17,7 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-    <sonar.host.url>http://3.104.105.253:9000/</sonar.host.url>
+    <sonar.host.url>http://3.25.85.129:9000/</sonar.host.url>
   </properties>
 
   <dependencies>
@@ -29,6 +29,17 @@
     </dependency>
   </dependencies>
 
+   <distributionManagement>
+		 <snapshotRepository>
+		    <id>nexusRepo</id>
+		    <url>http://13.239.57.23:8081/repository/sample-snapshot/</url>
+		 </snapshotRepository>
+		
+		 <repository>
+		    <id>nexusRepo</id>
+		    <url>http://13.239.57.23:8081/repository/sample-release/</url>
+		 </repository>
+  </distributionManagement>
   <build>
     <finalName>loans</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
